@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>가위바위보</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+  </head>
+
+  <body>
+    <script>
+
+    $( document ).ready(function() {
+      var array = ['가위', '바위', '보'];
+      var $user1 = $('#input1');
+      var $user2 = $('#input2');
+      var $btn = $('#inputBtn');
+      var i = 0;
+      var j = 0;
+
+      var interval = setInterval(function() {
+        $user1.val(array[i]);
+        $user2.val(array[j]);
+
+        $btn.click();
+
+        j++;
+        if(j == 3) {
+          i++;
+          j = 0;
+        }
+
+        if(i == 3)
+          clearInterval(interval);
+
+      }, 1000);
+    });
+
+
+
+    
+     function result(res , res1) {
+
+       console.log('user1: ' + res + ' vs user2: ' + res1);
+
+      if(res == res1){
+
+         console.log("비겼습니다");
+
+      }else if(res == "바위" && res1 == "가위" || res == "가위" && res1 == "보" || res == "보" && res1 == "주먹" ){
+
+         console.log("사용자가1 : 가 이겼습니다.");
+
+     }else {
+         console.log("사용자2 : 가 이겼습니다");
+
+     }
+
+     }
+
+    </script>
+
+   <form name="res">
+    사용자 1 : <input id="input1" type="text" name="user1" ><br>
+    사용자 2 : <input id="input2" type="text" name="user2" ><br>
+    <input id="inputBtn" type="button"  value="결과" onclick="result(user1.value , user2.value )">
+   </form>
+
+  </body>
+</html>

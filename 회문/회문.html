@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>회문</title>
+ </head>
+ <body>
+
+<form name="value">
+<p>회문 확인프로그램</p>
+<input type="text" name="str">
+<input type="button" value="결과확인" onclick="check(str.value)">
+
+</form>
+
+
+<script type="text/javascript">
+
+
+    function check(str) {
+
+    var i = str;
+    var before = i.split("");
+
+    var j = str;
+    var aft = j.split("");
+    aft.reverse();
+
+
+    for( var i = 0 ; i < aft.length ; i++){
+
+      if(before[i] == aft[i]){
+        continue;
+      }else {
+        alert("회문 아님")
+        return;
+      }
+    }
+    alert("회문입니다")
+
+  }
+</script>
+ </body>
+</html>
