@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>로또</title>
+    </head>
+
+    <body>
+
+        <form >
+
+            <p id="demo"></p>
+            <input type="button" name="" value="결과" onclick="mix()">
+
+        </form>
+
+        <script type="text/javascript">
+            function mix() {
+
+                //기록
+                var record = [];
+
+
+                while (record.length < 6) {
+                    var number = Math.floor(Math.random() * 45) + 1;
+
+                    if(!isDuplicate(record , number))
+                      record.push(number);
+
+                    demo.innerHTML = record;
+                    // flag = false;
+                    //
+                    // for (var i = 0; i < record.length; i++) {
+                    //     if (record[i] == number) {
+                    //         flag = true;
+                    //         break;
+                    //     }
+                    // }
+                    //
+                    // if (!flag) {
+                    //     record.push(number);
+                    // }
+
+
+            }
+          }
+            function isDuplicate(record , number) {
+              for (var i = 0; i < record.length; i++) {
+                  if (record[i] == number) {
+                      return true;
+                  }
+              }
+              return false;
+
+            }
+        </script>
+    </body>
+</html>
