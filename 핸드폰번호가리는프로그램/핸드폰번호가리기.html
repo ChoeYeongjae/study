@@ -23,13 +23,20 @@ function hide_number(number){
 
       for(var i = 0 ; i < num.length ; i++){
 
-        if(i < 7){
+        if(num.length == 10){
+          if(i < 6){
 
-          num[i] = "*";
+            num[i] = "*";
+          }
+        }
 
+        if(num.length == 11){
+          if(i < 7){
+            num[i] = "*";
+          }
         }
       }
-     str.result.value = num.join("");
+      str.result.value = num.join("");
     }
  </script>
 </body>
