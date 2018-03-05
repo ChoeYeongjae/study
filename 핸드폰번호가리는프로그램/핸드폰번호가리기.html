@@ -21,20 +21,8 @@ function hide_number(number){
      var num = [];
      num = number.split("");
 
-      for(var i = 0 ; i < num.length ; i++){
-
-        if(num.length == 10){
-          if(i < 6){
-
+      for(var i = 0 ; i < num.length-4 ; i++){
             num[i] = "*";
-          }
-        }
-
-        if(num.length == 11){
-          if(i < 7){
-            num[i] = "*";
-          }
-        }
       }
       str.result.value = num.join("");
     }
