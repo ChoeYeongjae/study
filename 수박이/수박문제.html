@@ -17,15 +17,19 @@
     function suba(num) {
 
 
-    var str = ["수","박","수","수","박","수","수","박","수","수","박","수"];
+    var str = [];
 
-    for(var i = 0 ; i < str.length-num ; i++){
 
-      str[i] = " ";
+    for(var i = 0 ; i < num ; i++){
+      str[i] = "박";
+    }
+    for(var j = 1 ; j < num ; j = j+2){
+      str[j] = "수";
 
     }
     alert(str.join(""));
-  }
+
+}
 
 
 </script>
