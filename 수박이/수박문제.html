@@ -19,18 +19,16 @@
 
     var str = [];
 
-
-
-    for(var i = 0  ; i < num ; i++){
-      for(var j = 1 ; j <num ; j = j + 2){
+    for(var i = 0 ; i < num ; i++){
+      if(i % 2 == 0){
       str[i] = "수";
-      str[j] = "박";
+      }else {
+      (i % 2 == 1)
+      }
+      str[i] = "박";
      }
-    }
-    alert(str.join(""));
-
-}
-
+     alert(str.join(""));
+   }
 
 </script>
 
