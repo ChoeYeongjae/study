@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>py문제 </title>
+  </head>
+  <body>
+
+    <form name="boolean">
+
+      <input type="text" name="str" value=""> <br>
+      <input type="button" name="" value="클릭" onclick="bool(str.value)">
+
+    </form>
+
+
+<script type="text/javascript">
+
+function bool(str1) {
+
+  var str = str1.toUpperCase();
+  var arr = [];
+  arr = str;
+
+  var p = [];
+  var y = [];
+
+ for(var i = 0 ; i < arr.length ; i++){
+
+   if(arr[i] == "P")
+   {
+     p.push("p");
+     continue;
+   }
+   if(arr[i] == "Y")
+    {
+       y.push("y");
+       continue;
+    }
+  }
+   if(p.length == y.length){
+      alert("true");
+  }else{
+    alert("false");
+  }
+ }
+
+
+
+</script>
+
+
+
+  </body>
+</html>
