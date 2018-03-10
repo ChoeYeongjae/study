@@ -42,28 +42,32 @@
     }
 
     function grad(avg3)
+
     {
-      if(avg3 < 100)
+
+      if(avg3 <= 100 && avg3 > 90)
       {
         str.den.value = "수";
       }
-      else if(avg3 < 90)
-     {
-       str.den.value = "우";
-     }
-     else if(avg3 < 80)
-     {
-       str.den.value = "미";
-     }
-     else if(avg3 < 70)
-     {
-       str.den.value = "양";
-     }
-     else
-     {
-       str.den.value = "가";
-     }
+      else if(avg3 <= 89 && avg3 > 80)
+      {
+        str.den.value = "우";
+      }
+      else if(avg3 <= 79 && avg3 > 70)
+      {
+        str.den.value = "미";
+      }
+      else if(avg3 <= 69 && avg3 > 60)
+      {
+        str.den.value = "양";
+      }
+      else
+      {
+          str.den.value = "가";
+      }
+
    }
+
  </script>
 </body>
 </html>
