@@ -17,7 +17,7 @@
       총점 : <input type="text" name="res1"><br>
       평균 : <input type="text" name="avge">
       <br>
-      등급 : <input type="text" name="den">
+      등급 : <input type="text" name="grad">
     </form>
 
     <script type="text/javascript">
@@ -46,19 +46,19 @@
 
       if(avg <= 100 && avg >= 90)
       {
-        str.den.value = "수";
+        str.grad.value = "수";
       }
       else if(avg <= 89 && avg >= 80)
       {
-        str.den.value = "우";
+        str.grad.value = "우";
       }
       else if(avg <= 79 && avg >= 70)
       {
-        str.den.value = "미";
+        str.grad.value = "미";
       }
       else if(avg <= 69 && avg >= 60)
       {
-        str.den.value = "양";
+        str.grad.value = "양";
       }
       else
       {
