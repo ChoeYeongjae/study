@@ -6,108 +6,64 @@
   </head>
   <body>
 
-<form name="str">
+    <form name="str">
+      영어 : <input type="text"  name="eng"><br>
+      수학 : <input type="text"  name="mat"><br>
+      컴퓨터 : <input type="text"  name="com"><br>
 
- 영어 : <input type="text"  name="eng"><br>
- 수학 : <input type="text"  name="mat"><br>
- 컴퓨터 : <input type="text"  name="com"><br>
+      <input type="button"  value="클릭" onclick="res(eng.value , mat.value , com.value)">
+      <br>
 
- <input type="button"  value="클릭" onclick="res(eng.value , mat.value , com.value)">
+      총점 : <input type="text" name="res1"><br>
+      평균 : <input type="text" name="avg">
+      <br>
+      등급 : <input type="text" name="den">
+    </form>
 
-<br>
- 총점 : <input type="text" name="res1"><br>
- 평균 : <input type="text" name="avg">
- <br>
- 등급 : <input type="text" name="den">
+    <script type="text/javascript">
 
-</form>
+    function res(eng,mat,com)
+    {
 
+      var Eng = parseInt(eng);
+      var Mat = parseInt(mat);
+      var Com = parseInt(com);
 
-<script type="text/javascript">
+      var sum = Eng + Mat + Com ;
 
- function res(eng,mat,com) {
+      var avg1 = sum / 3 ;
+      var avg2 = Math.floor(avg1);
 
-  var Eng = parseInt(eng);
-  var Mat = parseInt(mat);
-  var Com = parseInt(com);
+      str.res1.value = sum;
+      str.avg.value = avg2;
 
-  var sum = Eng + Mat + Com ;
+      if(!grad(avg2));
 
-  var avg1 = sum / 3 ;
-  var avg2 = Math.floor(avg1);
+    }
 
-  str.res1.value = sum;
-  str.avg.value = avg2;
-
-  switch (avg2) {
-
-     case 100:
-     case 99:
-     case 98:
-     case 97:
-     case 96:
-     case 95:
-     case 94:
-     case 93:
-     case 92:
-     case 91:
-     case 90:
-
-     str.den.value = "수";
-      break;
-
-
-     case 89:
-     case 88:
-     case 87:
-     case 86:
-     case 85:
-     case 84:
-     case 83:
-     case 82:
-     case 81:
-     case 80:
-
-     str.den.value = "우";
-      break;
-
-
-     case 79:
-     case 78:
-     case 77:
-     case 76:
-     case 75:
-     case 74:
-     case 73:
-     case 72:
-     case 71:
-     case 70:
-
-     str.den.value = "미";
-      break;
-
-     case 69:
-     case 68:
-     case 67:
-     case 66:
-     case 65:
-     case 64:
-     case 63:
-     case 62:
-     case 61:
-     case 60:
-
-     str.den.value = "양";
-      break;
-
-      default :
-      str.den.value = "가";
-      break;
-
-
-  }
-
- }
-</script>
-  </body>
+    function grad(avg3)
+    {
+      if(avg3 < 100)
+      {
+        str.den.value = "수";
+      }
+      else if(avg3 < 90)
+     {
+       str.den.value = "우";
+     }
+     else if(avg3 < 80)
+     {
+       str.den.value = "미";
+     }
+     else if(avg3 < 70)
+     {
+       str.den.value = "양";
+     }
+     else
+     {
+       str.den.value = "가";
+     }
+   }
+ </script>
+</body>
 </html>
