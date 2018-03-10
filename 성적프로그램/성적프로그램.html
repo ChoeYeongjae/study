@@ -31,33 +31,33 @@
 
       var sum = Eng + Mat + Com ;
 
-      var avg1 = sum / 3 ;
-      var avg2 = Math.floor(avg1);
+      var other = sum / 3 ;
+      var intiger = Math.floor(other);
 
       str.res1.value = sum;
-      str.avg.value = avg2;
+      str.avg.value = intiger;
 
-      grad(avg2);
+      grad(intiger);
 
     }
 
-    function grad(avg3)
+    function grad(inti)
 
     {
 
-      if(avg3 <= 100 && avg3 >= 90)
+      if(inti <= 100 && inti >= 90)
       {
         str.den.value = "수";
       }
-      else if(avg3 <= 89 && avg3 >= 80)
+      else if(inti <= 89 && inti >= 80)
       {
         str.den.value = "우";
       }
-      else if(avg3 <= 79 && avg3 >= 70)
+      else if(inti <= 79 && inti >= 70)
       {
         str.den.value = "미";
       }
-      else if(avg3 <= 69 && avg3 >= 60)
+      else if(inti <= 69 && inti >= 60)
       {
         str.den.value = "양";
       }
