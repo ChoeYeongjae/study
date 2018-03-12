@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>a,b</title>
+  </head>
+  <body>
+
+    <form name="str">
+      a : <input type="text" name="str1" value=""><br>
+      b : <input type="text" name="str2" value=""><br>
+      <input type="button"  value="결과" onclick="sis(str1.value, str2.value)">
+    </form>
+
+  <script type="text/javascript">
+  function sis(str3, str4)
+  {
+
+    var num = parseInt(str3);
+    var num1 = parseInt(str4);
+    var res = 0 ;
+
+    if(num == num1)
+    {
+      alert(num);
+    }
+    else if(num < num1)
+    {
+      for(num = parseInt(str3); num <= num1 ; num++)
+      {
+        res = res + num;
+      }
+        alert(res);
+
+      }
+
+      else if(num1 < num)
+      {
+        for(num1 = parseInt(str4); num1 <= num ; num1++)
+        {
+          res = res + num1;
+        }
+        alert(res);
+      }
+    }
+</script>
+</body>
+</html>
