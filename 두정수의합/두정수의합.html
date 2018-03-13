@@ -13,35 +13,37 @@
     </form>
 
   <script type="text/javascript">
-  function sis(str3, str4)
+
+  function sis(min, max)
   {
 
-    var num = parseInt(str3);
-    var num1 = parseInt(str4);
+    var num = parseInt(min);
+    var num1 = parseInt(max);
     var res = 0 ;
 
     if(num == num1)
     {
       alert(num);
     }
-
     else if(num < num1)
     {
-      for(num = parseInt(str3); num <= num1 ; num++)
-      {
-        res = res + num;
-      }
-      alert(res);
+       numw(num , num1 , res);
     }
-    else if(num1 < num)
+    else
     {
-      for(num1 = parseInt(str4); num1 <= num ; num1++)
-      {
-        res = res + num1;
-      }
-      alert(res);
+       numw(num1 , num , res);
     }
   }
+
+  function numw(min , max , res)
+  {
+    for(var i = min ; min <= max ; min++)
+    {
+      res = res + min;
+    }
+    alert(res);
+  }
+
 </script>
 </body>
 </html>
