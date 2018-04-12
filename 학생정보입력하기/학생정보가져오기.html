@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <form>
+      학번 : <input type="text" name="fellow"> </br>
+      이름 : <input type="text" name="name1"></br>
+      국어 : <input type="text" name="lang1"></br>
+      수학 : <input type="text" name="math"></br>
+      영어 : <input type="text" name="eng"></br>
+
+      <input type="button" value="등록" onclick="res(fellow.value,name1.value,lang1.value,math.value,eng.value)"></br>
+      <input type="button" value="학생정보출력" onclick="res.i()">
+    </form>
+
+    <script type="text/javascript">
+
+     var arr = [];
+
+     function res(fellow1,name2 ,lang1 ,math1 , eng1)
+     {
+       var ma = {
+         "학번" : fellow1,
+         "이름" : name2,
+         "국어" : lang1,
+         "수학" : math1,
+         "영어" : eng1,
+         "총합" : parseInt(lang1)+parseInt(math1)+parseInt(eng1),
+         "평균" : (parseInt(lang1)+parseInt(math1)+parseInt(eng1))/3,
+         "print" : function()
+         {
+           console.log("학번 :"+this.학번);
+           console.log("이름 :"+this.이름);
+           console.log("국어 :"+this.국어);
+           console.log("수학 :"+this.수학);
+           console.log("영어 :"+this.영어);
+           console.log("총합 :"+this.총합);
+           console.log("평균 :"+this.평균);
+           console.log("---------------");
+         }
+       }
+       arr.push(ma);
+
+       res.i = function()
+       {
+         for(var i = 0 ; i <arr.length ; i++)
+         {
+           arr[i].print();
+         }
+       }
+     }
+</script>
+</body>
+</html>
